@@ -1,0 +1,24 @@
+<% if logged_in? %>
+  <li class="pipe-separate t-light-green left">
+    <form action="/sessions" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" class="log-out" value="log out">
+    </form>
+  </li>
+  <li class="pipe-separate t-light-green left">
+    <a href="/">home</a>
+  </li>
+  <li class="pipe-separate t-light-green left">
+    <a href="/users/<%= current_user.id %>">profile</a>
+  </li>
+<% else %>
+  <li class="pipe-separate t-light-green left">
+    <a href="/users/new">register</a>
+  </li>
+  <li class="pipe-separate t-light-green left">
+    <a href="/sessions/new">login</a>
+  </li>
+  <li class="pipe-separate t-light-green left">
+    <a href="/">home</a>
+  </li>
+<% end %>
