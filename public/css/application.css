@@ -12,7 +12,7 @@
 html {
   height: 100%;
   background-color: #32bb7d;
-  background: url(../images/diamond-bg.jpg);
+  background: url(../images/argyle.png);
   background-attachment: fixed;
   line-height: 1.4;
 }
@@ -22,12 +22,12 @@ body {
 }
 
 a {
-  color: #32bb7d;
+  color: darkred;
   text-decoration: none;
 }
 
   a:hover {
-    color: #6ec7a5;
+    color: black;
     text-decoration: underline;
   }
 
@@ -60,7 +60,7 @@ input[type=text], input[type=password], textarea {
 
 /* formatting */
 .bg-dk-green {
-  background-color: #05724f;
+  background-color: #800000;
 }
 
 .bg-white {
@@ -68,7 +68,7 @@ input[type=text], input[type=password], textarea {
 }
 
 .button {
-  background: #32bb7d;
+  background: #A11C01;
   color: #fefefe;
   padding: 1em;
   text-decoration: none;
@@ -77,11 +77,11 @@ input[type=text], input[type=password], textarea {
   .button:hover {
     color: white;
     text-decoration: none;
-    background-color: #6ec7a5;
+    background-color: #D72401;
   }
 
 .c-dk-green {
-  color: #05724f;
+  color: darkred;
 }
 
 .c-lt-gray {
@@ -253,7 +253,7 @@ input[type=text], input[type=password], textarea {
 }
 
 .t-light-green {
-  color: #32bb7d;
+  color: darkred;
 }
 
 .text-c {
@@ -277,8 +277,8 @@ input[type=text], input[type=password], textarea {
 }
 
 .logo-container {
-  border: 5px solid #05724f;
-  color: #05724f;
+  border: 5px solid darkred;
+  color: darkred;
   width: 305px;
   height: 305px;
   border-radius: 50%;
@@ -288,5 +288,16 @@ input[type=text], input[type=password], textarea {
 }
 
 .logo {
-  width:160px;
+  width: 127px;
+}
+
+.log-out {
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  color: darkred;
+  cursor: pointer;
+}
+log-out:focus {
+  outline: none;
 }

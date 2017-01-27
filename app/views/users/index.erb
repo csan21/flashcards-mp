@@ -1,0 +1,10 @@
+<h1><u>player list</u></h1>
+<main role="main">
+  <ul class="entries-list no-bullets no-padding">
+    <% @users.each do |user| %>
+      <li class="entry-item pad-b-4">
+        <a href="/users/<%= user.id %>" class="entry-title font-2 pad-b-1-4 c-white"><%= user.name %></a></span>
+      </li>
+    <% end %>
+  </ul>
+</main>
