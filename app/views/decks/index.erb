@@ -1,4 +1,6 @@
 <% if logged_in? %>
+  <h1><u>choose a topic</u></h1>
+  <br>
   <main role="main">
     <ul class="entries-list no-bullets no-padding">
       <% @decks.each do |deck| %>
@@ -9,5 +11,7 @@
     </ul>
   </main>
 <% else %>
-  <p class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">LOG IN TO PLAY</p>
+  <a href="/sessions/new"><p class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">Log in to PLAY!</p></a>
+
+  <a href="/users/new"><p class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">Don't have an account? Register here!</p></a>
 <% end %>
