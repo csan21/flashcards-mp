@@ -1,0 +1,10 @@
+<div class="container">
+
+<h1><%= @card.question %></h1>
+
+<form method="post" action="/decks/:deck_id/cards">
+  <input type="text" name="answer" placeholder="Answer">
+  <button type="submit" value="Submit">
+</form>
+
+<div>
