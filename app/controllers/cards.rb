@@ -14,14 +14,14 @@ get '/decks/:deck_id/cards' do
   redirect "/decks/#{params[:deck_id]}/cards/#{session[:current_card].id}"
 end
 
-get 'decks/:deck_id/cards/:card_id' do
+get '/decks/:deck_id/cards/:card_id' do
   @card = Card.find_by(id: params[:card_id])
 
   erb :'decks/cards/show'
 end
 
 post '/decks/:deck_id/cards' do
-  if params[:answer] == session[:current_card].answer
+  if params[:answer].downcase == session[:current_card].answer.downcase
     Guess.create(round_id: session[:round], card_id: session[:current_card].id, correct?: true)
     session[:cards] -= [session[:current_card]]
   else
@@ -32,7 +32,11 @@ post '/decks/:deck_id/cards' do
 
   session[:current_card] = session[:cards].first
 
-  redirect "/decks/#{params[:deck_id]}/cards/#{session[:current_card].id}"
+  if session[:current_card]
+    redirect "/decks/#{params[:deck_id]}/cards/#{session[:current_card].id}"
+  else
+    redirect "/rounds/#{session[:round]}"
+  end
 
 end
 
