@@ -68,7 +68,7 @@ input[type=text], input[type=password], textarea {
 }
 
 .button {
-  background: #A11C01;
+  background: firebrick;
   color: #fefefe;
   padding: 1em;
   text-decoration: none;
