@@ -30,4 +30,3 @@ Round.create(player_id: 1, deck_id: 1)
 Round.create(player_id: 1, deck_id: 2)
 Round.create(player_id: 2, deck_id: 3)
 Round.create(player_id: 2, deck_id: 4)
-
