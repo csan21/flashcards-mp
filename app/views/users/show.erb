@@ -1,1 +1,12 @@
 <h1><%= @user.name %></h1>
+
+<main role="main">
+  <ul class="entries-list no-bullets no-padding">
+    <% @rounds.each do |round| %>
+      <li class="entry-item pad-b-4">
+        <%= round.deck.topic %><br>
+        <%= long_form_date(round.created_at) %>
+      </li>
+    <% end %>
+  </ul>
+</main>
