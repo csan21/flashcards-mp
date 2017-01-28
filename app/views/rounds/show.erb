@@ -1,3 +1,4 @@
 <h1><%= @round.deck.topic%></h1>
 
 <p>You've completed a round of <%= @round.deck.topic%>. You answered <%= correct_on_first_try(@guesses) %> out of <%= @round.deck.cards.count %> cards correctly on the first try. You submitted <%= @guesses.count %> total guesses during the round.</p>
+
