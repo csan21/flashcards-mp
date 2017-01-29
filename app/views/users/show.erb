@@ -1,12 +1,27 @@
-<h1><%= @user.name %></h1>
+<h1><%= @user.name %></h1><br>
 
 <main role="main">
-  <ul class="entries-list no-bullets no-padding">
-    <% @rounds.each do |round| %>
-      <li class="entry-item pad-b-4">
-        <%= round.deck.topic %><br>
-        <%= long_form_date(round.created_at) %>
-      </li>
+    <% @decks.each do |deck| %>
+        <% if @user.rounds.where(deck_id: deck.id).count > 0 %>
+          <h2><%= deck.topic %></h2>
+          <table>
+          <tr>
+            <th>Date</th>
+            <th>Cards in Deck</th>
+            <th>First Guesses Correct</th>
+            <th>Total Guesses</th>
+          </tr>
+          <% @user.rounds.where(deck_id: deck.id).each do |round| %>
+            <tr>
+              <td><%= long_form_date(round.created_at) %></td>
+              <td><%= deck.cards.count %></td>
+              <td><%= correct_on_first_try(round.guesses) %></td>
+              <td><%= round.guesses.count %></td>
+            </tr>
+          <% end %>
+          </table><br>
+        <% end %>
     <% end %>
-  </ul>
 </main>
+
+

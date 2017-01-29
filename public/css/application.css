@@ -26,11 +26,6 @@ a {
   text-decoration: none;
 }
 
-  a:hover {
-    color: black;
-    text-decoration: underline;
-  }
-
 input[type=text], input[type=password], textarea {
   color: #05724f;
 }
@@ -56,6 +51,7 @@ input[type=text], input[type=password], textarea {
 .right {
   float: right;
 }
+
 
 
 /* formatting */
@@ -118,10 +114,6 @@ input[type=text], input[type=password], textarea {
 
 .h-10 {
   height: 10em;
-}
-
-.hover-underline:hover {
-  text-decoration: underline;
 }
 
 .mar-b-1 {
@@ -248,6 +240,10 @@ input[type=text], input[type=password], textarea {
     border-right: none;
   }
 
+.question-button {
+  color: black;
+}
+
 .round-1 {
   border-radius: 1em;
 }
@@ -287,13 +283,18 @@ input[type=text], input[type=password], textarea {
   text-align: center;
 }
 
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
 .logo {
   width: 127px;
 }
 
 .log-out {
   background-color: transparent;
-  text-decoration: underline;
   border: none;
   color: darkred;
   cursor: pointer;

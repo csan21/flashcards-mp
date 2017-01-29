@@ -21,5 +21,6 @@ end
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
   @rounds = Round.where(player_id: @user.id)
+  @decks = Deck.all
   erb :'users/show'
 end
