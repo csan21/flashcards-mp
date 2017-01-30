@@ -2,7 +2,7 @@
 
 <h1><%= @card.question %></h1>
 
-<form method="post" action="/decks/:deck_id/cards">
+<form method="post" action=<%= "/decks/#{@card.deck.id}/cards" %>>
   <input type="text" name="answer" placeholder="Answer">
   <input class="question-button" type="submit" value="Submit">
 </form>
